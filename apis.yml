@@ -1,8 +1,24 @@
 aid: unidesk
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/unidesk.png
 name: Unidesk
-description: 'Unidesk is a company surfaced as a portfolio company of matrix-partners and added to the
-  API Evangelist network as a stub for enrichment. Sector: infrastructure. This profile is a lead awaiting
-  the enrichment pipeline.'
+description: Unidesk was a Marlborough, Massachusetts software company backed by Matrix
+  Partners that pioneered application layering for virtual desktop infrastructure,
+  packaging Windows applications and operating-system components into shareable virtual
+  disk layers. Citrix acquired Unidesk in January 2017 and the technology lives on
+  as Citrix App Layering. unidesk.com now 301-redirects to the Citrix App Layering
+  product page, the GitHub organization has been dormant since the acquisition, and
+  the company maintains no standalone API surface of its own.
 url: https://raw.githubusercontent.com/api-evangelist/unidesk/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -10,13 +26,40 @@ x-backed-by:
 - matrix-partners
 x-tier: stub
 x-tier-reason: portfolio-lead
+x-acquired-by: citrix
+x-acquired-date: '2017-01'
+x-enrichment:
+  date: '2026-07-21'
+  status: minimal
+  artifacts_added: 3
+  pass: local-v1
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
 - Infrastructure
+- Virtualization
+- Desktop Virtualization
+- Application Layering
+- VDI
+- Acquired
 apis: []
+common:
+- type: DomainSecurity
+  url: security/unidesk-domain-security.yml
+- name: Website (redirects to Citrix App Layering)
+  type: Website
+  url: https://www.unidesk.com
+- name: GitHub Organization (dormant since acquisition)
+  type: GitHubOrganization
+  url: https://github.com/Unidesk
+- name: Packages (no first-party libraries; community SDK only)
+  type: Packages
+  url: packages/unidesk-packages.yml
+- name: llms.txt (generated from catalog profile)
+  type: LLMsTxt
+  url: llms/unidesk-llms.txt
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com

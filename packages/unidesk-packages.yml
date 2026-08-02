@@ -1,0 +1,18 @@
+generated: '2026-07-21'
+method: searched
+source: npm, PyPI, NuGet, PowerShell Gallery registry searches + GitHub (2026-07-21)
+notes: >-
+  No first-party Unidesk client libraries exist on any public package registry
+  (npm search empty, PyPI 404, NuGet empty, PowerShell Gallery empty). Unidesk
+  was acquired by Citrix in January 2017 and its product became Citrix App
+  Layering. The only living client library for the former Unidesk technology is
+  a community-maintained, reverse-engineered PowerShell SDK for the Citrix App
+  Layering appliance, distributed from GitHub only.
+packages:
+- language: powershell
+  registry: github
+  name: UnideskSDK
+  url: https://github.com/ryancbutler/UnideskSDK
+  install: 'Import-Module ./ctxal-sdk.psm1  # clone from GitHub; not on PowerShell Gallery'
+  official: false
+  description: Reverse-engineered SDK to manage the Citrix App Layering (formerly Unidesk) appliance
